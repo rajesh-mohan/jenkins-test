@@ -3,7 +3,7 @@ pipeline {
     stages {
       stage('build') {
         steps {
-            withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '2d136b2d-1ceb-4312-80dc-be9105501d5b', passwordVariable: 'MY_PASSWORD1', usernameVariable: 'MY_USERNAME1']]) {
+            withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '3f9875c2-1c7e-4654-9f2d-d1a971c2a2fe', passwordVariable: 'MY_PASSWORD1', usernameVariable: 'MY_USERNAME1']]) {
                 sh 'export MY_PASSWORD=${MY_PASSWORD1} && export MY_USERNAME=${MY_USERNAME1} && python3 test.py' 
           }
         }
